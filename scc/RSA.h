@@ -2,8 +2,6 @@
 
 #include <scb/Bytes.h>
 
-#include <openssl/rsa.h>
-
 namespace scc {
 
     class RSA final {
@@ -26,9 +24,9 @@ namespace scc {
     private:
         void free();
 
-        ::RSA *rsa_;
-        BIGNUM *modulus_;
-        BIGNUM *exponent_;
+        void *rsa_;
+        void *modulus_;
+        void *exponent_;
     };
 
 }
