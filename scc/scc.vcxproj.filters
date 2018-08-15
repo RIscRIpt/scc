@@ -10,6 +10,9 @@
     <Filter Include="Exception">
       <UniqueIdentifier>{98651e64-07dc-428d-98cc-d75111707c7d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="DES">
+      <UniqueIdentifier>{a8da699a-0947-4874-a3ab-9aac4eeeadb3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Hash.cpp">
@@ -21,6 +24,9 @@
     <ClCompile Include="Exception.cpp">
       <Filter>Exception</Filter>
     </ClCompile>
+    <ClCompile Include="DES.cpp">
+      <Filter>DES</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Hash.h">
@@ -31,6 +37,9 @@
     </ClInclude>
     <ClInclude Include="Exception.h">
       <Filter>Exception</Filter>
+    </ClInclude>
+    <ClInclude Include="DES.h">
+      <Filter>DES</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

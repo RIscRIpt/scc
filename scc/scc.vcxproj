@@ -136,11 +136,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DES.cpp" />
     <ClCompile Include="Exception.cpp" />
     <ClCompile Include="Hash.cpp" />
     <ClCompile Include="RSA.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DES.h" />
     <ClInclude Include="Exception.h" />
     <ClInclude Include="Hash.h" />
     <ClInclude Include="RSA.h" />
