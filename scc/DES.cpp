@@ -53,7 +53,7 @@ scb::Bytes DES::crypt1(scb::Bytes const &buffer, Operation operation, scb::Bytes
     if (iv.empty()) {
         DES_ecb_encrypt((const_DES_cblock*)buffer.data(), (DES_cblock*)result.data(), &ks, operation);
     } else {
-        DES_cbc_encrypt(buffer.data(), result.data(), buffer.size(), &ks, (DES_cblock*)iv.data(), operation);
+        DES_cbc_encrypt(buffer.data(), result.data(), static_cast<long>(buffer.size()), &ks, (DES_cblock*)iv.data(), operation);
     }
 
     return result;
@@ -110,7 +110,7 @@ scb::Bytes DES::crypt3(scb::Bytes const &buffer, Operation operation, scb::Bytes
             throw std::invalid_argument("invalid operation");
         }
     } else {
-        DES_ede3_cbc_encrypt(buffer.data(), result.data(), buffer.size(), &ks1, &ks2, &ks3, (DES_cblock*)iv.data(), operation);
+        DES_ede3_cbc_encrypt(buffer.data(), result.data(), static_cast<long>(buffer.size()), &ks1, &ks2, &ks3, (DES_cblock*)iv.data(), operation);
     }
 
     return result;
