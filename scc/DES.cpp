@@ -4,7 +4,7 @@
 
 using namespace scc;
 
-DES::DES(scb::Bytes &&key)
+DES::DES(scb::Bytes const &key)
     : key(std::move(key))
 {
     if (this->key.size() & 0b111)
@@ -17,10 +17,6 @@ DES::DES(scb::Bytes &&key)
             throw std::runtime_error("Unsupported DES key size");
     }
 }
-
-DES::DES(scb::Bytes const &key)
-    : DES(std::move(key))
-{}
 
 scb::Bytes DES::decrypt1_ecb(scb::Bytes const &buffer) const {
     return crypt1(buffer, Decrypt, {});

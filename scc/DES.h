@@ -16,7 +16,6 @@ namespace scc {
             Encrypt = 1,
         };
 
-        DES(scb::Bytes &&key);
         DES(scb::Bytes const &key);
 
         scb::Bytes decrypt1_ecb(scb::Bytes const &buffer) const;
