@@ -136,15 +136,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AES.cpp" />
     <ClCompile Include="DES.cpp" />
+    <ClCompile Include="EVPContext.cpp" />
     <ClCompile Include="Exception.cpp" />
     <ClCompile Include="Hash.cpp" />
+    <ClCompile Include="mode.cpp" />
+    <ClCompile Include="operation.cpp" />
     <ClCompile Include="RSA.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AES.h" />
     <ClInclude Include="DES.h" />
+    <ClInclude Include="EVPContext.h" />
     <ClInclude Include="Exception.h" />
     <ClInclude Include="Hash.h" />
+    <ClInclude Include="mode.h" />
+    <ClInclude Include="operation.h" />
     <ClInclude Include="RSA.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -5,11 +5,9 @@
 using namespace scc;
 
 DES::DES(scb::Bytes const &key)
-    : key(std::move(key))
+    : key(key)
 {
-    if (this->key.size() & 0b111)
-        throw std::runtime_error("DES key must be 8 byte aligned");
-    switch (this->key.size()) {
+    switch (key.size()) {
         case 8: break; // DES
         case 16: break; // DES3
         case 24: break; // DES3
